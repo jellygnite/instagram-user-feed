@@ -72,7 +72,7 @@ class MediaHydrator
         }
 
         $media->setComments($commentsCount);
-        $media->setLikes($node->edge_media_preview_like->count);
+        $media->setLikes($node->edge_liked_by->count);
 
         $media->setLink(InstagramHelper::URL_BASE . "p/{$node->shortcode}/");
 
